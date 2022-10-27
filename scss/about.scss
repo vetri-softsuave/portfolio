@@ -1,0 +1,85 @@
+@import 'config';
+
+.about{
+    padding-bottom: 2rem;
+
+    &-bio-img{
+        height: 50vh;
+        width: 100%;
+        background: 
+    linear-gradient(
+       to right,
+       rgba($primary-color,0.9),
+       rgba($primary-color,0.3)
+    ),
+   url('../img/model-1.jpg') center top;
+       background-size: cover;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: flex-end;
+
+       p{
+        padding-bottom: 2rem;
+       }
+    }
+    &-bio{
+        width: 80%;
+        text-align: center;
+        .text-secondary{
+            padding-bottom: 1rem;
+        }
+    }
+
+    .social-icons{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+
+        a{
+            padding: 0.4rem;
+
+            &:hover{
+                color: $secondary-color;
+            }
+        }
+    }
+    
+    footer{
+        transform: rotate(90deg) translate(-3rem, -5rem);
+    }
+}
+
+.jobs{
+    width: 60vw;
+    margin: 2rem auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+
+    &-job{
+        background: lighten($primary-color, 10%);
+        border-bottom: 5px solid $secondary-color;
+        padding: 0.5rem;
+        @include transition-ease;
+
+        h2,h3{
+            margin: 0.5rem 0;
+        }
+    
+        h6{
+            margin: 0.3rem 0;
+        }
+
+        &:hover{
+            background-color: set-text-color(lighten($primary-color, 10%));
+            &,h3,h6,p{
+               color:black;
+            }
+        }
+    }
+
+}
+
